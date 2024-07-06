@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: League Spartan, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.main-text h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: hsl(300, 43%, 22%);
+}
+
+.main-text p {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    color: hsl(303, 10%, 53%);
+}
+
+.main-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-cards .card {
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    max-width: 500px; 
+}
+
+.main-cards .card .star-image {
+    margin-right: 10px;
+}
+
+.main-cards .card p {
+    margin-top: 0;
+    color: hsl(300, 43%, 22%);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.main-card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-card-section .card {
+    background-color: hsl(300, 43%, 22%);
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    flex-wrap: wrap;
+}
+
+.main-card-section .card .card-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.main-card-section .card .card-text h3 {
+    margin: 0px 15px;
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}
+
+.main-card-section .card .card-text p {
+    color: hsl(333, 80%, 67%);
+    font-size: 1.1rem;
+}
+
+.main-card-section .text-section p {
+    color: hsl(300, 24%, 96%);
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .main-cards .card:nth-child(1) {
+        transform: translateX(-30px);
+    }
+    
+    .main-cards .card:nth-child(2) {
+        transform: translateX(-15px);
+    }
+    
+    .main-cards .card:nth-child(3) {
+        transform: translateX(0);
+    }
+
+    .main-text {
+        max-width: 45%;
+    }
+
+    .main-cards {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-card-section {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .main-card-section .card {
+        width: 30%;
+    }
+
+    .main-card-section .card:nth-child(1) {
+        transform: translateY(-10px);
+    }
+
+    .main-card-section .card:nth-child(2) {
+        transform: translateY(10px);
+    }
+
+    .main-card-section .card:nth-child(3) {
+        transform: translateY(20px);
+    }
+}
+
+@media (max-width: 767px) {
+    .main-cards .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-cards .card img {
+        margin: 0 0 10px 0;
+    }
+}
